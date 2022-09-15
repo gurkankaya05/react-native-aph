@@ -9,12 +9,17 @@ import LoginFailed from "../../../utils/BannerMessage/Login/LoginFailed";
 import LoginSuccess from "../../../utils/BannerMessage/Login/LoginSuccess";
 import { showMessage } from "react-native-flash-message";
 import authErrorCode from "../../../utils/authMessage/authErrorCode";
+import Loading from "../../../components/Animation/Loading/Loading";
+import LoadingCat from "../../../components/Animation/Loading/LoadingCat";
 const Login = ({navigation}) =>{
 
     const registerScreen = () =>{
         navigation.navigate('Register')
     }
-    const [loading,setLoading] = useState(false);
+    const mainScreen = () =>{
+
+    }
+     const [loading,setLoading] = useState(false);
     const initalFormValues = {
         usermail : '',
         password : '',
@@ -28,6 +33,8 @@ const Login = ({navigation}) =>{
             console.log(initalFormValues)    
             setLoading(false)
             LoginSuccess();
+            navigation.navigate('Main')
+
             
         } catch (error) {
             setLoading(false)
@@ -41,8 +48,12 @@ const Login = ({navigation}) =>{
       
     }
 
+    if(loading){
+        return <LoadingCat/>
+    }
     return(
             <View style={styles.inner_container}>
+                <Loading/>
                 <Text style={styles.title}>Welcome! </Text>
                 <Formik initialValues={initalFormValues} onSubmit={handleFormSubmit}>
                     {({values,handleChange,handleSubmit}) => (

@@ -7,6 +7,7 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import Register from "./pages/auth/Register/Register";
 import Login from "./pages/auth/Login/Login";
 import colors from "./styles/colors/colors";
+import MainPage from "./pages/main/Mainpage";
 import FlashMessage from "react-native-flash-message";
 
 
@@ -22,6 +23,7 @@ export default App = () =>{
       <Stack.Navigator >
       <Stack.Screen name="Login" component={Login} options={{headerShown:false}} />
       <Stack.Screen name="Register" component={Register} options={{headerBackTitle:"Login",headerTitle:"",headerTintColor:colors.black}}/>
+      <Stack.Screen name="Main" component={MainPage} options={{headerShown:false}} />
       </Stack.Navigator>
     )
   }

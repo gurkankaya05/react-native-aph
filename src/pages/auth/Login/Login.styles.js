@@ -4,7 +4,6 @@ export default styles = StyleSheet.create({
     
     inner_container:{
         flex:1,
-        justifyContent:'center',
         margin:7,
     },
     title:{

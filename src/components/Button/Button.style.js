@@ -1,4 +1,5 @@
 import { StyleSheet } from 'react-native';
+import colors from '../../styles/colors/colors';
 const base_style = 
 StyleSheet.create({
     container:{
@@ -42,12 +43,13 @@ export default styles ={
             ...base_style,
             container:{
                 ...base_style.container,
-                backgroundColor:'white',
+                backgroundColor:'#fafafa',
+                
                
             },
             text:{
                 ...base_style.text,
-                color:'red',
+                color:colors.blue,
             }
             
             })
