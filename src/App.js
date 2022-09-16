@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Button, SafeAreaView,Text,View } from 'react-native';
 import auth from '@react-native-firebase/auth';
 import database from '@react-native-firebase/database';
@@ -9,16 +9,23 @@ import Login from "./pages/auth/Login/Login";
 import colors from "./styles/colors/colors";
 import MainPage from "./pages/main/Mainpage";
 import FlashMessage from "react-native-flash-message";
+import '@react-native-firebase/auth';
 
 
 
 const Stack = createNativeStackNavigator();
 export default App = () =>{
+const [userSession , setUserSession] = useState('');
 
-
-  
+useEffect(() =>{
+  auth().onAuthStateChanged((user) =>{
+    setUserSession(!!user);
+  })
+},[])
 
   const AuthStack = () =>{
+
+ 
     return (
       <Stack.Navigator >
       <Stack.Screen name="Login" component={Login} options={{headerShown:false}} />
@@ -29,6 +36,7 @@ export default App = () =>{
   }
 
   return(
+    
     
     <NavigationContainer>
       <Stack.Navigator screenOptions={{headerShown:false}}>

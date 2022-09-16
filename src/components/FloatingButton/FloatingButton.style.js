@@ -2,14 +2,16 @@ import { StyleSheet } from "react-native"
 import colors from "../../styles/colors/colors"
 export default styles = StyleSheet.create({
 container:{
-    backgroundColor:colors.blue,
-    flex:1,
-    position:"absolute",
-    width:60,
-    height:60,
-    borderRadius:30,
-    alignItems:'center',
-    justifyContent:'center',
+  position:'absolute',
+  bottom:20,
+  right:20,
+  borderRadius:50,
+  width:60,
+  height:60,
+  alignItems:'center',
+  justifyContent:'center',
+  backgroundColor:colors.blue
+    
     
     
     
@@ -17,10 +19,14 @@ container:{
 },
 main:{
     flex:1,
+    backgroundColor:'red',  
+    justifyContent:'center',
     flexDirection:'row',
-    justifyContent:'flex-end',
-    marginTop:660,
-    marginRight:15
+    
+    
+    
+    
+    
     
 
 

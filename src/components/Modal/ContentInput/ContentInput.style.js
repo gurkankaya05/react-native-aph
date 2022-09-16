@@ -18,13 +18,14 @@ export default styles = StyleSheet.create({
             margin:0,
     },
     input_container:{
-        
         margin:10,
         borderWidth:0.4,
         backgroundColor:'white',
         borderColor:'white',
         borderRadius:6,
-        height:30,
+        height:31,
+        
+        
         
         
     },

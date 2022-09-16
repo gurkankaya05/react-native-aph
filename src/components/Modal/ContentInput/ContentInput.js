@@ -25,9 +25,9 @@ const ContentInput =({visible,onClose,onSend}) =>{
         onBackButtonPress={onClose}
         style={styles.modal} >
             <View style={styles.container}>
-                <Text style={styles.title}>Mesajını Gönder!</Text>
+                <Text style={styles.title}>Send Your Message!</Text>
                 <View style={styles.input_container}> 
-                <TextInput placeholder="Mesaj yaz..." 
+                <TextInput placeholder="Write message..." 
                 onChangeText={setText} multiline placeholderTextColor="gray"/>
                 </View>
                 <View style={styles.button_container}>

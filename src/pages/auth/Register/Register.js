@@ -10,6 +10,7 @@ import RegisterSucces from "../../../utils/BannerMessage/Register/RegisterSucces
 import { showMessage } from "react-native-flash-message";
 import NotEqualPassword from "../../../utils/BannerMessage/Register/NotEqualPassword";
 import authErrorCode from "../../../utils/authMessage/authErrorCode";
+import LoadingCat from "../../../components/Animation/Loading/LoadingCat";
 const Register = ({navigation}) =>{
     
     const initalFormValues = {
@@ -42,6 +43,9 @@ const Register = ({navigation}) =>{
             
         }
         
+    }
+    if(loading){
+        <LoadingCat/>
     }
      return(
         <View style={styles.inner_container}>
