@@ -9,6 +9,6 @@
 
 # Welcome Screen
 
-![WelcomeScreen](https://i.ibb.co/y0tSPkW/Ekran-Resmi-2022-09-14-22-59-30.png)
+![WelcomeScreen](https://user-images.githubusercontent.com/63854428/190617471-87cef4d0-e88b-40ea-8ee7-760ba71d1643.gif)
 # Register Screen
 ![RegisterScreen](https://i.ibb.co/dDdxdfz/Ekran-Resmi-2022-09-14-22-59-45.png)
